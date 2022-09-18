@@ -1,3 +1,4 @@
+# while loop with user input
 while True:
     try:
         number = int(input("Please enter an integer: "))
@@ -7,3 +8,7 @@ while True:
         print("Error - not an integer!")
         continue
 
+# This appends the user_input to the numbers.txt file
+numbers_file = open("numbers.txt", "a")
+numbers_file.write(f"\n{number}")
+numbers_file.close()
